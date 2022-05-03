@@ -1,0 +1,93 @@
+@import 'global';
+
+.logo{
+    width:150px;
+    height:50px;
+}
+
+header{
+    position:relative;
+    top:0;
+    border-top: 30px solid rgb(52, 53, 51);
+    width:100%;
+    background-color: white !important;
+}
+
+.wrapper{
+    background-color: #fff;
+    padding-top: auto;
+    padding-bottom:auto;
+    background-image: url("/images/fondo.png");
+}
+
+
+
+// NESTING
+
+nav{
+    @include caja-flex(space-between, center, nowrap);
+
+    ul{
+        display:flex;
+        padding:0;
+
+        a{
+            padding: 5px;
+            margin: 10px;
+            font-size: 1.6rem;
+            font-weight:bold;
+        }
+
+        a:hover{
+            color:#6495ED;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.presentacion{
+    padding-top: 10px;
+    padding-bottom:0px;
+    @include caja-flex(space-between, center, nowrap);
+
+    .flex-item2{
+        text-align:center;
+    }
+
+    h1{
+        margin-top:0;
+        padding-right: 20px;
+        font-size: $font-h1;
+    }
+
+    p{
+        padding-right: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+.servicios{
+    div{
+        text-align: center;
+    }
+
+    .tipo-servicios{
+        @include caja-flex(center, center, nowrap);
+        i{
+            font-size: 30px;
+            color: #6495ED;
+        }
+    }
+}
+
+footer{
+    min-height: 80px;
+    background-color: rgb(52, 53, 51);
+    margin-top: 0;
+    .footer-content{
+        text-align:center;
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+}
+@import 'medios';
